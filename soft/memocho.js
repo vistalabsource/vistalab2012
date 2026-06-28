@@ -1,6 +1,11 @@
 const edit = document.getElementById("edit");
+const count_text = document.getElementById("count_text");
 
 edit.value = localStorage.getItem("edit") || "";
+
+edit.addEventListener('input', () => {
+   count_text.textContent = "文字数: " + edit.value.length;
+});
 
 function saveText() {
     localStorage.setItem("edit", edit.value);
