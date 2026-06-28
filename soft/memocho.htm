@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>簡易メモ帳</title>
+
+        <style>
+            body {
+                text-align: center;
+                background-color: aquamarine;
+            }
+
+            #editor {
+                display: inline-block;
+                border: 2px solid gray;
+                padding: 1rem;
+                background: white;
+                text-align: left;
+            }
+
+            #edit {
+                width: 640px;
+                height: 360px;
+                min-width: 320px;
+                min-height: 200px;
+                font-size: 1rem;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>簡易メモ帳</h1>
+
+        <div id="editor">
+            <textarea id="edit" rows="15" cols="60"></textarea>
+            <script src="memocho.js"></script>
+        </div>
+        <hr>
+        <button onclick="saveText()">保存</button>
+    </body>
+</html>
