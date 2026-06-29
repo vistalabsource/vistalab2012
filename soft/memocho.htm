@@ -2,6 +2,10 @@
     <head>
         <title>簡易メモ帳</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
+
         <style>
             body {
                 text-align: center;
@@ -29,19 +33,41 @@
                 background-color: skyblue;
                 color: white;
             }
+
+            #text_style {
+                display: flex;
+                justify-content: center;
+            }
         </style>
     </head>
 
     <body>
         <h1>簡易メモ帳</h1>
 
-        <p id="count_text"></p>
+        <div id="text_style">
+            <label for="text_size">文字サイズ</label>
+            <select id="text_size">
+                <option value="minimum" selected>小</option>
+                <option value="medium">中</option>
+                <option value="big">大</option>
+            </select>
+            
+            <label for="font">フォント</label>
+            <select id="font">
+                <option value="gothic" selected>ゴシック体</option>
+                <option value="mincho">明朝体</option>
+                <option value="m_plus">M+フォント</option>
+            </select>
+        </div>
+        <hr>
         <div id="editor">
             <textarea id="edit" rows="15" cols="60"></textarea>
-            <script src="memocho.js"></script>
         </div>
+        <hr>
+        <p id="count_text"></p>
         <hr>
         <button onclick="saveText()">保存</button>
         <button onclick="shareToTwitter()" id="sharetwitter">Twitter（旧X）にシェア</button>
+        <script src="memocho.js"></script>
     </body>
 </html>
