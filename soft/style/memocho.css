@@ -1,0 +1,73 @@
+body {
+    text-align: center;
+    background-color: aquamarine;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+#editor {
+    display: inline-block;
+    border: 2px solid gray;
+    padding: 1rem;
+    background: white;
+    text-align: left;
+    width: min(100%, 1320px);
+}
+
+#edit {
+    width: 100%;
+    height: 70vh;
+    min-width: 320px;
+    min-height: 200px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#sharetwitter {
+    background-color: skyblue;
+    color: white;
+}
+
+#text_style {
+    display: flex;
+    justify-content: center;
+}
+
+#edit {
+    border: 1px solid #000;
+}
+
+button, select {
+    max-width: 100%;
+    margin: 0.25rem;
+    font: inherit;
+}
+
+dialog {
+    max-width: calc(100% - 2rem);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0.75rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    #editor {
+        padding: 0.75rem;
+    }
+
+    #edit {
+        min-width: 0;
+        height: 60vh;
+    }
+}
