@@ -1,7 +1,22 @@
-const edit       = document.getElementById("edit");
-const count_text = document.getElementById("count_text");
-const text_size  = document.getElementById("text_size");
-const font       = document.getElementById("font");
+const edit         = document.getElementById("edit");
+const count_text   = document.getElementById("count_text");
+const text_size    = document.getElementById("text_size");
+const font         = document.getElementById("font");
+const setting      = document.getElementById("setting");
+const closeSetting = document.getElementById("closeSetting");
+const openSetting  = document.getElementById("openSetting");
+
+if (openSetting && setting && typeof setting.showModal === "function") {
+    openSetting.addEventListener("click", () => {
+        setting.showModal();
+    });
+}
+
+if (closeSetting && setting) {
+    closeSetting.addEventListener("click", () => {
+        setting.close();
+    });
+}
 
 function applyTextSize() {
     if (!edit || !text_size) {
@@ -24,11 +39,21 @@ function applyFont() {
 
     if (font.value === "gothic") {
         edit.style.fontFamily = "sans-serif";
+    } else if (font.value === "gothic_2") {
+        edit.style.fontFamily = "'BIZ UDPGothic', sans-serif";
     } else if (font.value === "mincho") {
         edit.style.fontFamily = "serif";
-    } else if (font.value === "m_plus") {
-        edit.style.fontFamily = "'M PLUS 1P', sans-serif";
+    } else if (font.value === "mincho_2") {
+        edit.style.fontFamily = "'BIZ UDPMincho', serif";
     }
+}
+
+function setBulletPoints() {
+    edit.value += "・\n・\n・"
+}
+
+function setNumber() {
+    edit.value += "1.\n2.\n3."
 }
 
 function saveSettings() {

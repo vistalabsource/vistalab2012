@@ -3,9 +3,11 @@
         <title>簡易メモ帳</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=BIZ+UDPMincho&display=swap" rel="stylesheet">
 
+        <script src="memocho.js" defer></script>
+        
         <style>
             body {
                 text-align: center;
@@ -21,8 +23,8 @@
             }
 
             #edit {
-                width: 640px;
-                height: 360px;
+                width: 1280px;
+                height: 720px;
                 min-width: 320px;
                 min-height: 200px;
                 font-size: 1rem;
@@ -38,36 +40,46 @@
                 display: flex;
                 justify-content: center;
             }
+
+            #edit {
+                width: 1280px;
+                height: 720px;
+                border: 1px solid #000;
+            }
         </style>
     </head>
 
     <body>
         <h1>簡易メモ帳</h1>
-
-        <div id="text_style">
+        <button id="openSetting">書式設定</button>
+        <button onclick="setBulletPoints()">箇条書き</button>
+        <button onclick="setNumber()">番号書き</button>
+        <dialog id="setting">
             <label for="text_size">文字サイズ</label>
             <select id="text_size">
                 <option value="minimum" selected>小</option>
                 <option value="medium">中</option>
                 <option value="big">大</option>
             </select>
-            
+            <br>
             <label for="font">フォント</label>
             <select id="font">
                 <option value="gothic" selected>ゴシック体</option>
+                <option value="gothic_2">ゴシック体2</option>
                 <option value="mincho">明朝体</option>
-                <option value="m_plus">M+フォント</option>
+                <option value="mincho_2">明朝体2</option>
             </select>
-        </div>
+            <hr>
+            <button id="closeSetting">閉じる</button>
+        </dialog>
         <hr>
         <div id="editor">
-            <textarea id="edit" rows="15" cols="60"></textarea>
+            <textarea id="edit"></textarea>
         </div>
         <hr>
         <p id="count_text"></p>
         <hr>
         <button onclick="saveText()">保存</button>
         <button onclick="shareToTwitter()" id="sharetwitter">Twitter（旧X）にシェア</button>
-        <script src="memocho.js"></script>
     </body>
 </html>
