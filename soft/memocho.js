@@ -40,11 +40,11 @@ function applyFont() {
     if (font.value === "gothic") {
         edit.style.fontFamily = "sans-serif";
     } else if (font.value === "gothic_2") {
-        edit.style.fontFamily = "'BIZ UDPGothic', sans-serif";
+        edit.style.fontFamily = "'BIZ UDGothic', sans-serif";
     } else if (font.value === "mincho") {
         edit.style.fontFamily = "serif";
     } else if (font.value === "mincho_2") {
-        edit.style.fontFamily = "'BIZ UDPMincho', serif";
+        edit.style.fontFamily = "'BIZ UDMincho', serif";
     }
 }
 
