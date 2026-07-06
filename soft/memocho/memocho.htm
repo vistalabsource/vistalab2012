@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>簡易メモ帳</title>
+        <title>簡易メモ帳 v1.1</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,6 +11,17 @@
         <script src="script/memocho.js" defer></script>
         
         <link rel="stylesheet" href="style/memocho.css">
+
+        <style>
+            body {
+                background-color: aquamarine;
+                text-align: center;
+                margin: 0;
+                padding: 1rem;
+                box-sizing: border-box;
+                overflow-wrap: anywhere;
+            }
+        </style>
     </head>
 
     <body>
@@ -38,11 +49,13 @@
         </dialog>
         <hr>
         <div id="editor">
-            <textarea id="edit"></textarea>
+            <textarea id="edit" onchange="updateCount()"></textarea>
         </div>
         <hr>
         <p id="count_text"></p>
         <hr>
+        <button onclick="downloadText()">ダウンロード</button>
+        <script src="script/downloadText.js"></script>
         <button onclick="saveText()">保存</button>
         <button onclick="shareToTwitter()" id="sharetwitter">Twitter（旧X）にシェア</button>
     </body>

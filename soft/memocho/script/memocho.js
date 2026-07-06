@@ -1,4 +1,4 @@
-const edit         = document.getElementById("edit");
+﻿const edit         = document.getElementById("edit");
 const count_text   = document.getElementById("count_text");
 const text_size    = document.getElementById("text_size");
 const font         = document.getElementById("font");
@@ -6,6 +6,7 @@ const setting      = document.getElementById("setting");
 const closeSetting = document.getElementById("closeSetting");
 const openSetting  = document.getElementById("openSetting");
 
+// 險ｭ螳壹Δ繝ｼ繝繝ｫ縺ｮ陦ｨ遉ｺ繝ｻ髱櫁｡ｨ遉ｺ縺ｮ繧､繝吶Φ繝医Μ繧ｹ繝翫・繧定ｨｭ螳壹☆繧・
 if (openSetting && setting && typeof setting.showModal === "function") {
     openSetting.addEventListener("click", () => {
         setting.showModal();
@@ -18,6 +19,7 @@ if (closeSetting && setting) {
     });
 }
 
+// 譖ｸ蠑剰ｨｭ螳壹・邂・擅譖ｸ縺埼未騾｣
 function applyTextSize() {
     if (!edit || !text_size) {
         return;
@@ -49,11 +51,13 @@ function applyFont() {
 }
 
 function setBulletPoints() {
-    edit.value += "・\n・\n・"
+    edit.value += "\u30fb\n\u30fb\n\u30fb";
+    updateCount();
 }
 
 function setNumber() {
-    edit.value += "1.\n2.\n3."
+    edit.value += "1.\n2.\n3.";
+    updateCount();
 }
 
 function saveSettings() {
@@ -84,7 +88,7 @@ function loadSettings() {
 
 function updateCount() {
     if (edit && count_text) {
-        count_text.textContent = "文字数: " + edit.value.length;
+        count_text.textContent = "\u6587\u5b57\u6570: " + edit.value.length;
     }
 }
 
@@ -123,7 +127,7 @@ function saveText() {
 
     localStorage.setItem("edit", edit.value);
     saveSettings();
-    alert("保存しました。");
+    alert("\u4fdd\u5b58\u3057\u307e\u3057\u305f\u3002");
 }
 
 function shareToTwitter() {
