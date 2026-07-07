@@ -49,11 +49,14 @@
             <br>
             <label for="font">フォント</label>
             <select id="font">
-                <option value="gothic" selected>ゴシック体</option>
-                <option value="gothic_2">ゴシック体2</option>
-                <option value="mincho">明朝体</option>
-                <option value="mincho_2">明朝体2</option>
+                <option value="gothic" selected style="font-family: sans-serif;">ゴシック体</option>
+                <option value="gothic_2" style="font-family: 'BIZ UDGothic', sans-serif;">ゴシック体2</option>
+                <option value="mincho" style="font-family: serif;">明朝体</option>
+                <option value="mincho_2" style="font-family: 'BIZ UDMincho', sans-serif;">明朝体2</option>
+                <option value="chinese" style="font-family: 'Microsoft YaHei Light', sans-serif;">怪しい中華フォント（※）</option>
             </select>
+
+            <p>※Windowsでのみ利用可能。</p>
             <hr>
             <button id="closeSetting">閉じる</button>
         </dialog>

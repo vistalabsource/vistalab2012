@@ -47,6 +47,8 @@ function applyFont() {
         edit.style.fontFamily = "serif";
     } else if (font.value === "mincho_2") {
         edit.style.fontFamily = "'BIZ UDMincho', serif";
+    } else if (font.value === "chinese") {
+        edit.style.fontFamily = "'Microsoft YaHei Light', sans-serif";
     }
 }
 
