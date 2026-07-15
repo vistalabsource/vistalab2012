@@ -23,3 +23,10 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+#news {
+    border: 2px solid purple;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1rem;
+}
