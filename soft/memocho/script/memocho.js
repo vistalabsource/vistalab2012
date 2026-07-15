@@ -6,7 +6,7 @@ const setting      = document.getElementById("setting");
 const closeSetting = document.getElementById("closeSetting");
 const openSetting  = document.getElementById("openSetting");
 
-// 險ｭ螳壹Δ繝ｼ繝繝ｫ縺ｮ陦ｨ遉ｺ繝ｻ髱櫁｡ｨ遉ｺ縺ｮ繧､繝吶Φ繝医Μ繧ｹ繝翫・繧定ｨｭ螳壹☆繧・
+// 設定画面を表示
 if (openSetting && setting && typeof setting.showModal === "function") {
     openSetting.addEventListener("click", () => {
         setting.showModal();
@@ -19,7 +19,7 @@ if (closeSetting && setting) {
     });
 }
 
-// 譖ｸ蠑剰ｨｭ螳壹・邂・擅譖ｸ縺埼未騾｣
+// フォント関連
 function applyTextSize() {
     if (!edit || !text_size) {
         return;
@@ -52,6 +52,7 @@ function applyFont() {
     }
 }
 
+// 箇条書き関連
 function setBulletPoints() {
     edit.value += "\u30fb\n\u30fb\n\u30fb";
     updateCount();
@@ -62,6 +63,7 @@ function setNumber() {
     updateCount();
 }
 
+// 設定を保存
 function saveSettings() {
     if (text_size) {
         localStorage.setItem("memocho_text_size", text_size.value);
@@ -72,6 +74,7 @@ function saveSettings() {
     }
 }
 
+// 次回読み込み時に設定を復元
 function loadSettings() {
     if (text_size) {
         const savedSize = localStorage.getItem("memocho_text_size");
@@ -90,7 +93,7 @@ function loadSettings() {
 
 function updateCount() {
     if (edit && count_text) {
-        count_text.textContent = "\u6587\u5b57\u6570: " + edit.value.length;
+        count_text.textContent = "文字数: " + edit.value.length;
     }
 }
 
@@ -129,7 +132,7 @@ function saveText() {
 
     localStorage.setItem("edit", edit.value);
     saveSettings();
-    alert("\u4fdd\u5b58\u3057\u307e\u3057\u305f\u3002");
+    alert("保存しました。");
 }
 
 function shareToTwitter() {
