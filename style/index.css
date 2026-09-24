@@ -3,7 +3,7 @@
 }
 
 #menu {
-    border: 2px solid red;
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
     max-width: 720px;
@@ -13,7 +13,7 @@
 }
 
 #profile {
-    border: 2px solid green;
+    border: 1px solid green;
     max-width: 720px;
     margin: 0 auto;
     padding: 1rem;
@@ -22,11 +22,4 @@
 img {
     max-width: 100%;
     height: auto;
-}
-
-#news {
-    border: 2px solid purple;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 1rem;
 }
