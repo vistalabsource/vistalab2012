@@ -3,7 +3,7 @@ declare(strict_types=1);
 session_start();
 
 const DATA_FILE = __DIR__ . '/data/posts.json';
-const ADMIN_PASSWORD = 'midori2006'; // Change this before publishing the board.
+const ADMIN_PASSWORD = ''; // Change this before publishing the board.
 
 if (!is_dir(__DIR__ . '/data')) {
     mkdir(__DIR__ . '/data', 0775, true);
